@@ -208,3 +208,40 @@ footer {
         display: flex;
     }
 }
+/* Center XOLO Brand Name */
+.brand-name {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Center Logo (If you have one) */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Adjust size as needed */
+}
+
+/* Make XOLO Name & Logo Responsive */
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 32px; /* Reduce size on mobile */
+    }
+    .logo {
+        width: 100px; /* Smaller logo on mobile */
+    }
+}
+
+/* Make Content Fit on Mobile Screens */
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive Navigation Menu */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
