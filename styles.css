@@ -62,3 +62,20 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Slideshow - Full Page Background */
+.slideshow-container {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100vh; /* Cover full screen */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+}
