@@ -1,24 +1,13 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
-    color: white;
-    text-align: center;
+    background-color: #0a1f1b !important; /* Dark Green */
+    color: #FFD700 !important; /* Gold */
 }
 
 /* Header */
 header {
-    background: linear-gradient(to right, #222, #444);
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background: #013220 !important; /* Dark Green */
+    color: #FFD700 !important; /* Gold */
 }
 .banner {
     background: linear-gradient(to right, #222, #444);
@@ -35,26 +24,15 @@ header {
 }
 
 /* Navigation */
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin-right: 20px;
+.nav ul li a {
+    color: #FFD700 !important; /* Gold */
 }
 
-.nav-links li {
-    padding: 10px;
-    position: relative;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ff9800;
+nav ul li a:hover {
+    background-color: #FFD700 !important;
+    color: #013220 !important;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /* Dropdown */
@@ -131,4 +109,12 @@ footer {
 }
 .slideshow-container .slide:first-child {
     display: block; /* Show only the first slide initially */
+}
+footer {
+    background: #013220 !important; /* Dark Green */
+    color: #FFD700 !important; /* Gold */
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    font-weight: bold;
 }
