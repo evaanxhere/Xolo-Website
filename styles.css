@@ -280,3 +280,30 @@ html, body {
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+/* Ensure elements fit properly on small screens */
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Adjust text size and spacing for mobile */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none; /* Ensures dropdown stays hidden on mobile */
+    }
+}
