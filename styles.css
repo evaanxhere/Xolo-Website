@@ -340,3 +340,9 @@ html, body {
         display: none; /* Ensures dropdown stays hidden on mobile */
     }
 }
+/* Ensure banner resizes properly */
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust this as needed */
+}
