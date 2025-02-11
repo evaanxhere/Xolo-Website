@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset Default Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +7,10 @@
 
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-color: #f8f8f8;
 }
 
 /* Header / Navigation */
@@ -19,8 +19,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Fix height */
-    background: rgba(0, 0, 0, 0.85);
+    height: 70px; /* Fixed Height */
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,18 +29,18 @@ header {
 
 /* Centered XOLO Logo */
 .logo {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: white;
     text-align: center;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
 }
 
 nav ul {
@@ -82,6 +82,7 @@ nav ul li a {
     display: block;
 }
 
+/* Show Dropdown on Hover (Only for Desktop) */
 @media (min-width: 1024px) {
     .dropdown:hover .dropdown-menu {
         display: block;
@@ -90,7 +91,7 @@ nav ul li a {
 
 /* Banner / Slideshow */
 .banner {
-    margin-top: 60px; /* Push content down */
+    margin-top: 70px; /* Push content below header */
     width: 100%;
     max-height: 500px;
     overflow: hidden;
@@ -100,6 +101,7 @@ nav ul li a {
 .banner img {
     width: 100%;
     height: auto;
+    max-height: 500px;
 }
 
 /* Slideshow Controls */
@@ -136,15 +138,16 @@ footer {
     padding: 15px;
 }
 
-/* Mobile Optimization */
+/* 🔥 Mobile Fixes */
 @media (max-width: 768px) {
     .logo {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     nav ul {
         flex-direction: column;
         text-align: center;
+        padding: 10px 0;
     }
 
     .dropdown-menu {
