@@ -1,198 +1,64 @@
-/* HEADER STYLES */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
-}
-
-/* XOLO LOGO */
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-}
-
-/* NAVIGATION MENU */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* RESPONSIVE FIXES */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
-/* HEADER STYLES */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
-}
-
-/* LOGO */
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-}
-
-/* NAVIGATION MENU */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* MOBILE MENU FIX */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide menu by default */
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: black;
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    nav ul.active {
-        display: flex; /* Show when toggled */
-    }
-}
+/* General Styles */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-main {
-    flex: 1;
-}
-/* FOOTER STYLES */
-footer {
+/* Header */
+header {
+    background: linear-gradient(to right, #222, #444);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
     width: 100%;
-    background: black;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a {
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #ff9800;
+}
+
+/* Slideshow */
+.slideshow-container {
+    width: 100%;
+    max-width: 500px; /* Square Area */
+    height: 500px;
+    margin: 80px auto 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #222, #444);
+    color: #fff;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.9rem;
     position: relative;
     bottom: 0;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-/* HERO SECTION - Welcome Banner */
-.hero {
-    position: relative;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero .banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-}
-
-.hero .banner-text h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.hero .banner-text p {
-    font-size: 1.2rem;
-}
-
-/* Ensure Slides Stay Behind Text */
-.hero .slider img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-/* Make sure text doesn't get hidden */
-.hero .slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 1;
-}
-
-/* Fix Text Hover Issues */
-.hero .banner-text:hover {
-    z-index: 3;
 }
