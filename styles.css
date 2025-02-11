@@ -246,3 +246,24 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+/* Ensure the site scales correctly on all screens */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Make sure content fits properly */
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Ensure text and images resize correctly */
+img {
+    max-width: 100%;
+    height: auto;
+}
