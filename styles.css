@@ -267,3 +267,16 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* Fix Zoom Issue on Large Screens */
+body {
+    max-width: 1200px; /* Adjust the width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add spacing on sides */
+}
+
+/* Make sure everything scales properly */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
