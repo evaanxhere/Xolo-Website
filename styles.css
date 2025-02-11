@@ -67,25 +67,6 @@ header {
     left: 0;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    padding: 10px;
-    text-align: left;
-}
-
-.dropdown-menu a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-menu a:hover {
-    background: #ff9800;
-}
-
 /* Slideshow */
 .slideshow-container {
     width: 100%;
