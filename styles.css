@@ -1,296 +1,145 @@
-/* Global Styles */
-body, h1, h2, h3, p, ul {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #f8f8f8;
 }
 
-/* Header & Navbar */
+/* Header / Navigation */
 header {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 50px;
+    width: 100%;
+    height: 60px; /* Fix height */
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 1000;
-    transition: background 0.3s ease-in-out;
 }
 
+/* Centered XOLO Logo */
 .logo {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
-.nav-links {
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
-.nav-links li {
-    margin: 0 15px;
+nav ul li {
+    position: relative;
 }
 
-.nav-links a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    position: relative;
-    transition: color 0.3s;
+    padding: 10px 15px;
 }
 
-/* Underline Hover Effect */
-.nav-links a::after {
-    content: "";
+/* Dropdown Menu (Desktop Only) */
+.dropdown-menu {
+    display: none;
     position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
+    background: black;
+    list-style: none;
+    padding: 10px;
+    top: 100%;
     left: 0;
-    background: white;
-    transition: width 0.3s;
+    min-width: 150px;
+    z-index: 100;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.dropdown-menu li {
+    padding: 8px;
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    background: white;
-    height: 3px;
-    width: 25px;
-    margin: 5px 0;
-}
-
-/* Banner Section */
-/* Slideshow Container */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-height: 80vh; 
-    overflow: hidden;
-}
-
-/* Individual Slides */
-.slide {
-    display: none;
-    width: 100%;
-    position: relative;
-}
-
-.slide img {
-    width: 100%;
-    height: 80vh; 
-    object-fit: cover;
-}
-
-/* Text Overlay */
-.slide-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.dropdown-menu a {
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 20px 40px;
-    border-radius: 5px;
-    animation: fadeIn 1.5s ease-in-out;
+    text-decoration: none;
+    display: block;
 }
 
-.slide-content h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
+@media (min-width: 1024px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
 
-.slide-content p {
-    font-size: 20px;
-    margin-bottom: 20px;
+/* Banner / Slideshow */
+.banner {
+    margin-top: 60px; /* Push content down */
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Shop Now Button */
-.shop-now {
-    padding: 12px 25px;
-    background: white;
-    color: black;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+.banner img {
+    width: 100%;
+    height: auto;
 }
 
-.shop-now:hover {
-    background: gray;
-}
-
-/* Fading animation */
-.fade {
-    animation: fadeEffect 1.5s ease-in-out;
-}
-
-@keyframes fadeEffect {
-    from { opacity: 0.4 }
-    to { opacity: 1 }
-}
-
-/* Navigation buttons */
-.prev, .next {
+/* Slideshow Controls */
+.banner .prev,
+.banner .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 10px 20px;
-    font-size: 24px;
+    padding: 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.8);
+.banner .prev {
+    left: 10px;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.banner .next {
+    right: 10px;
+}
+
+/* Main Content */
+.main {
+    padding: 20px;
+    text-align: center;
+}
 
 /* Footer */
 footer {
-    text-align: center;
     background: black;
     color: white;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: black;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-/* Center XOLO Brand Name */
-.brand-name {
     text-align: center;
-    font-size: 48px;
-    font-weight: bold;
-    margin-top: 20px;
-    color:White 
+    padding: 15px;
 }
 
-/* Center Logo (If you have one) */
-.logo {
-    display: block;
-    margin: 0 auto;
-    width: 150px; /* Adjust size as needed */
-}
-
-/* Make XOLO Name & Logo Responsive */
-@media (max-width: 768px) {
-    .brand-name {
-        font-size: 32px; /* Reduce size on mobile */
-    }
-    .logo {
-        width: 100px; /* Smaller logo on mobile */
-    }
-}
-
-/* Make Content Fit on Mobile Screens */
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Responsive Navigation Menu */
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-/* Ensure the site scales correctly on all screens */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Make sure content fits properly */
-.container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Ensure text and images resize correctly */
-img {
-    max-width: 100%;
-    height: auto;
-}
-/* Fix Zoom Issue on Large Screens */
-body {
-    max-width: 1200px; /* Adjust the width */
-    margin: 0 auto; /* Center the content */
-    padding: 0 20px; /* Add spacing on sides */
-}
-
-/* Make sure everything scales properly */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-/* Ensure elements fit properly on small screens */
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-/* Adjust text size and spacing for mobile */
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .logo {
-        font-size: 2rem;
-        text-align: center;
+        font-size: 1.8rem;
     }
 
     nav ul {
@@ -299,79 +148,14 @@ body {
     }
 
     .dropdown-menu {
-        position: static;
         display: none;
     }
 
-    .dropdown:hover .dropdown-menu {
-        display: none; /* Ensures dropdown stays hidden on mobile */
-    }
-}
-/* Prevent zoom issues */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-/* Make sure content scales properly on mobile */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 10px; /* Add some space on the sides */
+    .banner {
+        max-height: 350px;
     }
 
-    .logo {
-        font-size: 2.5rem;
-        text-align: center;
+    .banner img {
+        max-height: 100%;
     }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: none;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none; /* Ensures dropdown stays hidden on mobile */
-    }
-}
-/* Ensure banner resizes properly */
-.banner img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Adjust this as needed */
-}
-/* Fix header size and position */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* Reduce height */
-    background: rgba(0, 0, 0, 0.8); /* Add slight transparency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Fix logo size */
-.logo {
-    font-size: 1.8rem; /* Reduce size */
-}
-
-/* Ensure content is not covered by the header */
-.banner {
-    margin-top: 60px; /* Push content down */
-}
-/* Ensure slideshow fits the screen */
-.banner img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Adjust as needed */
 }
