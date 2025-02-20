@@ -156,3 +156,41 @@ nav {
         font-size: 14px;
     }
 }
+
+.slide {
+    background-size: contain; /* Ensures entire image is visible, may letterbox */
+    background-position: center;
+}
+
+/* Update within the existing @media (max-width: 768px) block */
+.nav-links a {
+    color: #fff !important; /* Override default purple with white */
+    text-decoration: none !important; /* Remove underlines */
+    transition: color 0.3s ease; /* Keep hover effect */
+}
+
+.nav-links a:hover {
+    color: #ffcc00 !important; /* Maintain yellow hover effect */
+}
+
+/* Adjust slideshow text positioning and spacing */
+.slide-text {
+    left: 20px;
+    width: 90%;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.slide-text h1 {
+    font-size: 28px; /* Slightly larger than 32px for readability */
+    margin-bottom: 5px; /* Reduce space below heading */
+}
+
+.slide-text p {
+    font-size: 14px; /* Smaller paragraph for tighter fit */
+}
+
+/* Ensure slideshow height fits mobile screens */
+.slideshow {
+    height: auto; /* Let it adjust to content height */
+    min-height: 100vh; /* Minimum height for full-screen feel */
+}
