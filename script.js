@@ -16,3 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const exploreButton = document.getElementById("explore-btn");
+    const exploreSection = document.getElementById("explore");
+
+    exploreButton.addEventListener("click", () => {
+        exploreSection.style.display = "block";
+        exploreSection.scrollIntoView({ behavior: "smooth" });
+    });
+});
