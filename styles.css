@@ -287,3 +287,27 @@ nav {
         margin-bottom: 20px;
     }
 }
+#explore {
+    display: none; /* Hide the Explore section by default */
+    text-align: center;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
