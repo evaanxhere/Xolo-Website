@@ -102,3 +102,57 @@ nav {
         transform: translateY(-50%) translateX(0);
     }
 }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Navigation adjustments */
+    header {
+        padding: 15px 20px; /* Reduce padding for smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stack logo and links vertically */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        position: static; /* Remove absolute positioning on mobile */
+        transform: none; /* Reset transform */
+        margin-bottom: 10px; /* Space between logo and links */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Smaller gap for mobile */
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Remove leftover margin */
+    }
+
+    /* Slideshow adjustments */
+    .slide-text {
+        left: 20px; /* Reduce left offset */
+        width: 90%; /* Ensure text fits */
+    }
+
+    .slide-text h1 {
+        font-size: 32px; /* Smaller heading */
+    }
+
+    .slide-text p {
+        font-size: 16px; /* Smaller paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .slide-text h1 {
+        font-size: 24px;
+    }
+
+    .slide-text p {
+        font-size: 14px;
+    }
+}
