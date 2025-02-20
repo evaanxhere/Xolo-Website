@@ -23,10 +23,13 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Aligns nav-links to the right */
     align-items: center;
     position: relative;
+    max-width: 1200px; /* Optional: Limits width for better control */
+    margin: 0 auto; /* Centers the nav container */
 }
+
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -36,10 +39,11 @@ nav {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .nav-links {
     list-style: none;
     display: flex;
-    margin-left: auto; /* Pushes the links to the right */
+    gap: 40px; /* Replaces margin-left for consistent spacing */
 }
 /* Slideshow */
 .slideshow {
