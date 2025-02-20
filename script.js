@@ -1,24 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Existing slideshow code (keep it as is)
-    const slides = document.querySelectorAll(".slide");
-    let currentSlide = 0;
+    const exploreButton = document.querySelector("a[href='#explore']");
+    const exploreSection = document.getElementById("explore");
 
-    function showNextSlide() {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-    }
-
-    setInterval(showNextSlide, 5000);
-    slides[0].classList.add("active");
-
-    // Add to cart functionality
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
-    addToCartButtons.forEach(button => {
-        button.addEventListener("click", (e) => {
-            const productCard = e.target.closest(".product-card");
-            alert(`Added ${productCard.querySelector("h3").textContent} to cart!`);
-            // You can enhance this with a real cart system later
-        });
+    exploreButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default scrolling behavior
+        exploreSection.style.display = "block"; // Show the Explore section
+        exploreSection.scrollIntoView({ behavior: "smooth" }); // Scroll to it smoothly
     });
 });
