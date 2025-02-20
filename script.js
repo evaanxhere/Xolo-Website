@@ -1,18 +1,16 @@
-window.onload = function() {
-    let slideIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
 
-    function showSlides() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  // Hide all slides
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";  // Show only the current slide
-        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    function showNextSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
     }
 
-    showSlides();
-};
+    // Change slide every 5 seconds
+    setInterval(showNextSlide, 5000);
+
+    // Ensure the first slide is visible on load
+    slides[0].classList.add("active");
+});
