@@ -27,7 +27,11 @@ nav {
     align-items: center;
     position: relative;
 }
-
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Pushes the links to the right */
+}
 .logo {
     font-size: 24px;
     font-weight: bold;
