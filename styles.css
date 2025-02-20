@@ -223,3 +223,67 @@ nav {
         font-size: 14px;
     }
 }
+/* Ensure product cards have their styling */
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover img {
+    opacity: 0.8;
+}
+
+/* Update mobile product styling in @media (max-width: 768px) */
+@media (max-width: 768px) {
+    .product-card {
+        margin: 0 auto; /* Center cards */
+        width: 90%; /* Ensure full width on mobile */
+    }
+
+    .product-card img {
+        height: 200px; /* Smaller images on mobile */
+    }
+
+    .product-grid {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px;
+    }
+}
+/* Categories Section */
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.categories h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Update mobile responsiveness for categories */
+@media (max-width: 768px) {
+    .categories h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
