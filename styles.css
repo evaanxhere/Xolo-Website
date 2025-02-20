@@ -157,11 +157,6 @@ nav {
     }
 }
 
-.slide {
-    background-size: contain; /* Ensures entire image is visible, may letterbox */
-    background-position: center;
-}
-
 /* Update within the existing @media (max-width: 768px) block */
 .nav-links a {
     color: #fff !important; /* Override default purple with white */
