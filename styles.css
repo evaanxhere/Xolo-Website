@@ -8,10 +8,10 @@
 body {
     overflow-x: hidden;
     color: #fff;
+    background-color: black;
 }
 
 /* Navigation */
-
 header {
     position: fixed;
     top: 0;
@@ -23,297 +23,43 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end; /* Aligns nav-links to the right */
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    max-width: 1200px; /* Optional: Limits width for better control */
-    margin: 0 auto; /* Centers the nav container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Replaces margin-left for consistent spacing */
-}
-/* Slideshow */
-.slideshow {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+    gap: 40px;
 }
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    transform: translateY(-50%);
-    text-align: left;
-    animation: slideIn 1s ease-out;
-}
-
-.slide-text h1 {
-    font-size: 60px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.slide-text p {
-    font-size: 20px;
-    opacity: 0.9;
-}
-
-/* Animation for text */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50%) translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(-50%) translateX(0);
-    }
-}
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Navigation adjustments */
-    header {
-        padding: 15px 20px; /* Reduce padding for smaller screens */
-    }
-
-    nav {
-        flex-direction: column; /* Stack logo and links vertically */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo {
-        position: static; /* Remove absolute positioning on mobile */
-        transform: none; /* Reset transform */
-        margin-bottom: 10px; /* Space between logo and links */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Smaller gap for mobile */
-        text-align: center;
-    }
-
-    .nav-links li {
-        margin-left: 0; /* Remove leftover margin */
-    }
-
-    /* Slideshow adjustments */
-    .slide-text {
-        left: 20px; /* Reduce left offset */
-        width: 90%; /* Ensure text fits */
-    }
-
-    .slide-text h1 {
-        font-size: 32px; /* Smaller heading */
-    }
-
-    .slide-text p {
-        font-size: 16px; /* Smaller paragraph */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    .slide-text h1 {
-        font-size: 24px;
-    }
-
-    .slide-text p {
-        font-size: 14px;
-    }
-}
-
-/* Update within the existing @media (max-width: 768px) block */
 .nav-links a {
-    color: #fff !important; /* Override default purple with white */
-    text-decoration: none !important; /* Remove underlines */
-    transition: color 0.3s ease; /* Keep hover effect */
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffcc00 !important; /* Maintain yellow hover effect */
+    color: gold;
 }
 
-/* Adjust slideshow text positioning and spacing */
-.slide-text {
-    left: 20px;
-    width: 90%;
-    padding: 10px; /* Add padding for better spacing */
-}
-
-.slide-text h1 {
-    font-size: 28px; /* Slightly larger than 32px for readability */
-    margin-bottom: 5px; /* Reduce space below heading */
-}
-
-.slide-text p {
-    font-size: 14px; /* Smaller paragraph for tighter fit */
-}
-
-/* Ensure slideshow height fits mobile screens */
-.slideshow {
-    height: auto; /* Let it adjust to content height */
-    min-height: 100vh; /* Minimum height for full-screen feel */
-}
-
-/* Update .product-grid for desktop */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Update mobile responsiveness in @media (max-width: 768px) */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards on mobile */
-        gap: 20px; /* Reduce gap */
-    }
-
-    .product-card img {
-        height: 180px; /* Smaller images on mobile */
-    }
-
-    .product-card h3 {
-        font-size: 16px;
-    }
-
-    .product-card p {
-        font-size: 14px;
-    }
-
-    .add-to-cart {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-}
-/* Ensure product cards have their styling */
-.product-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-}
-
-.product-card:hover img {
-    opacity: 0.8;
-}
-
-/* Update mobile product styling in @media (max-width: 768px) */
-@media (max-width: 768px) {
-    .product-card {
-        margin: 0 auto; /* Center cards */
-        width: 90%; /* Ensure full width on mobile */
-    }
-
-    .product-card img {
-        height: 200px; /* Smaller images on mobile */
-    }
-
-    .product-grid {
-        display: flex;
-        flex-direction: column; /* Stack cards vertically */
-        gap: 20px;
-    }
-}
-/* Categories Section */
-.categories {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.categories h3 {
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #000;
-    margin-bottom: 30px;
-}
-
-/* Update mobile responsiveness for categories */
-@media (max-width: 768px) {
-    .categories h3 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-}
-#explore {
-    display: none; /* Hide the Explore section by default */
-    text-align: center;
-    padding: 20px;
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.product {
-    width: 250px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.product:hover {
-    transform: scale(1.05);
-}
+/* Banner */
 .banner {
     position: relative;
-    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .banner img {
@@ -339,30 +85,101 @@ nav {
     background-color: gold;
     color: black;
 }
-.banner {
+
+/* Slideshow */
+.slideshow {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ensures banner covers full screen height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
     overflow: hidden;
 }
 
-#explore-btn {
+.slide {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    z-index: 10; /* Ensures it stays above everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-#explore-btn:hover {
-    background-color: #444;
+.slide.active {
+    opacity: 1;
+}
+
+/* Explore Section */
+#explore {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    color: black;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .slide-text {
+        left: 20px;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .slide-text h1 {
+        font-size: 28px;
+    }
+
+    .slide-text p {
+        font-size: 14px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
 }
