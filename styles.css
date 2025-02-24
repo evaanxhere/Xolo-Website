@@ -78,7 +78,7 @@ nav {
     font-size: 18px;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    z-index: 1000; /* Ensures it stays above everything */
 }
 
 #explore-btn:hover {
