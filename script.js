@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'XOLO Classic', price: 'Rs.9999', image: 'https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png' },
             { name: 'XOLO Dunks', price: 'Rs.12999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9275d342-c34f-4d25-8641-17357e19d6f8/AIR+JORDAN+1+RETRO+HIGH+OG.png' },
             { name: 'XOLO Sport', price: 'Rs.13999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/7b13bc7f-eaa8-4a70-a921-42956d8247fe/ZM+VAPOR+16+ELITE+AG-PRO.png' },
-            { name: 'XOLO Sport Xolo', price: 'Rs.16999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/16a7042f-9b4f-4d86-b58a-554fc38ba90e/PHANTOM+GX+II+ELITE+AG-PRO.png' },
+            { name: 'XOLO Sportx', price: 'Rs.16999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/16a7042f-9b4f-4d86-b58a-554fc38ba90e/PHANTOM+GX+II+ELITE+AG-PRO.png' },
          
         
         ];
