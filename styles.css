@@ -82,9 +82,9 @@ nav a:hover {
     transition: opacity 1s ease;
 }
 
-.slide:nth-child(1) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png/1200x800/ff6f61/fff?text=Slide+1'); }
-.slide:nth-child(2) { background-image: url('https://static.nike.com/a/images/f_auto/dpr_3.5,cs_srgb/h_307,c_limit/d4d2b0c0-3edd-492c-ae6b-beb59fb7ab88/the-lebron-xxii-is-built-to-handle-pressure-and-powerful-moves.jpg/1200x800/2ecc71/fff?text=Slide+2'); }
-.slide:nth-child(3) { background-image: url('https://static.nike.com/a/images/f_auto/dpr_3.5,cs_srgb/h_307,c_limit/ec2d2bd4-e145-4df8-887e-aa025b23ab12/kobe-footwear-and-apparel-release-during-nike-s-year-of-the-mamba.png/1200x800/f1c40f/fff?text=Slide+3'); }
+.slide:nth-child(1) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png'); }
+.slide:nth-child(2) { background-image: url('https://static.nike.com/a/images/f_auto/dpr_3.5,cs_srgb/h_307,c_limit/d4d2b0c0-3edd-492c-ae6b-beb59fb7ab88/the-lebron-xxii-is-built-to-handle-pressure-and-powerful-moves.jpg'); }
+.slide:nth-child(3) { background-image: url('https://static.nike.com/a/images/f_auto/dpr_3.5,cs_srgb/h_307,c_limit/ec2d2bd4-e145-4df8-887e-aa025b23ab12/kobe-footwear-and-apparel-release-during-nike-s-year-of-the-mamba.png'); }
 
 .slide.active {
     opacity: 1;
