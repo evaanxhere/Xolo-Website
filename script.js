@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadProducts() {
         const productGrid = document.querySelector('.product-grid');
         const products = [
-            { name: 'XOLO Runner', price: 'Rs.12999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/ed8d46c0-d433-467c-a72a-c850d6380c85/NIKE+SB+DUNK+LOW+PRO.png/300x300/ff6f61/fff?text=Runner' },
-            { name: 'XOLO Sprint', price: 'Rs.14999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/3a1a6fce-e35c-4a32-893c-9704f2868423/NIKE+VOMERO+18.png/300x300/2ecc71/fff?text=Sprint' },
-            { name: 'XOLO Classic', price: 'Rs.10999', image: 'https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png/300x300/f1c40f/fff?text=Classic' }
+            { name: 'XOLO Runner', price: 'Rs.12999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/ed8d46c0-d433-467c-a72a-c850d6380c85/NIKE+SB+DUNK+LOW+PRO.png' },
+            { name: 'XOLO Sprint', price: 'Rs.14999', image: 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/3a1a6fce-e35c-4a32-893c-9704f2868423/NIKE+VOMERO+18.png' },
+            { name: 'XOLO Classic', price: 'Rs.10999', image: 'https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png' }
         ];
 
         products.forEach(product => {
