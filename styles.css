@@ -101,13 +101,21 @@ nav a:hover {
 }
 
 .slide-content h2 {
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.5s ease-in;
 }
 
 .slide-content p {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: fadeIn 2s ease-in;
 }
 
