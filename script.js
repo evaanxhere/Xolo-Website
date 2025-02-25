@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide);
     }
 
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
