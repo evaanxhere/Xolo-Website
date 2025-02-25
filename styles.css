@@ -2,184 +2,271 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    overflow-x: hidden;
-    color: #fff;
-    background-color: black;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Navigation */
 header {
+    background-color: #1a1a1a;
+    padding: 1rem;
     position: fixed;
-    top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    top: 0;
     z-index: 1000;
-    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.logo {
-    font-size: 24px;
+nav h1 {
+    color: #fff;
+    font-size: 2rem;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 2rem;
 }
 
-.nav-links a {
+nav a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: gold;
+nav a:hover {
+    color: #ff6f61;
 }
 
-/* Banner */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-}
-
-#explore-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
     cursor: pointer;
-    z-index: 1000; /* Ensures it stays above everything */
 }
 
-#explore-btn:hover {
-    background-color: gold;
-    color: black;
-}
-
-/* Slideshow */
-.slideshow {
-    position: relative;
-    width: 100%;
+.banner {
     height: 100vh;
+    position: relative;
     overflow: hidden;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .slide {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease;
 }
+
+.slide:nth-child(1) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png/1200x800/ff6f61/fff?text=Slide+1'); }
+.slide:nth-child(2) { background-image: url('https://static.nike.com/a/images/f_auto/dpr_3.5,cs_srgb/h_307,c_limit/d4d2b0c0-3edd-492c-ae6b-beb59fb7ab88/the-lebron-xxii-is-built-to-handle-pressure-and-powerful-moves.jpg/1200x800/2ecc71/fff?text=Slide+2'); }
+.slide:nth-child(3) { background-image: url('https://static.nike.com/a/images/f_auto/dpr_3.5,cs_srgb/h_307,c_limit/ec2d2bd4-e145-4df8-887e-aa025b23ab12/kobe-footwear-and-apparel-release-during-nike-s-year-of-the-mamba.png/1200x800/f1c40f/fff?text=Slide+3'); }
 
 .slide.active {
     opacity: 1;
 }
 
-/* Explore Section */
-#explore {
-    display: none;
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
     text-align: center;
-    padding: 40px;
-    background: white;
-    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.product-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.slide-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.slide-content p {
+    font-size: 1.5rem;
+    animation: fadeIn 2s ease-in;
+}
+
+.explore-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:hover {
+    background-color: #e65b50;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.products {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: none;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.product-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .product {
-    width: 250px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.product:hover {
-    transform: scale(1.05);
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Mobile Responsiveness */
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-content h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.product-content p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
+    nav {
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .nav-links {
+    nav ul {
+        display: none;
         flex-direction: column;
-        gap: 15px;
+        width: 100%;
         text-align: center;
     }
 
-    .banner {
-        height: auto;
+    nav ul.active {
+        display: flex;
     }
 
-    .slide-text {
-        left: 20px;
-        width: 90%;
-        padding: 10px;
+    .menu-toggle {
+        display: block;
     }
 
-    .slide-text h1 {
-        font-size: 28px;
+    .slide-content h2 {
+        font-size: 2rem;
     }
 
-    .slide-text p {
-        font-size: 14px;
+    .slide-content p {
+        font-size: 1.2rem;
     }
 
-    .product-container {
-        flex-direction: column;
-        align-items: center;
+    .explore-button {
+        padding: 12px 30px;
+        font-size: 1rem;
     }
 
-    .product {
-        width: 90%;
+    .products h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 }
