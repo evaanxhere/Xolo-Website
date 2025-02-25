@@ -111,7 +111,7 @@ nav a:hover {
 }
 
 .slide-content p {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif; /* Changes normal text to sans-serif (e.g., Arial, Helvetica) */
     font-size: 1.5rem;
     font-weight: 400;
     color: #fff;
