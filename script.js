@@ -37,6 +37,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         loadProducts();
     });
+    // About Us link functionality
+    const aboutUsLink = document.querySelector('a[href="#about-us"]');
+    const aboutUsSection = document.querySelector('.about-us');
+
+    aboutUsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        aboutUsSection.style.display = 'block';
+        window.scrollTo({
+            top: aboutUsSection.offsetTop - 100,
+            behavior: 'smooth'
+        });
+    });
+
+    // Learn More button functionality
+    const learnMoreButton = document.querySelector('.learn-more');
+    learnMoreButton.addEventListener('click', () => {
+        alert('Learn more about XOLO! Stay tuned for updates.');
+    });
 
     // Load sample products (you can replace with actual data)
     function loadProducts() {
