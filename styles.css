@@ -83,9 +83,9 @@ nav a:hover {
     transition: opacity 1s ease;
 }
 
-.slide:nth-child(1) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/01cffb53-bc31-4a9c-99d3-5d47cb13011f/image.png'); }
-.slide:nth-child(2) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/b32bf6ee-d8f0-4721-9e5d-9bb6b3bbf03e/image.jpg'); }
-.slide:nth-child(3) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/d11d6100-0359-4ca7-ae20-f7193ca1a43e/image.png'); }
+.slide:nth-child(1) { background-image: url('https://via.placeholder.com/1200x800/ff6f61/fff?text=Slide+1'); }
+.slide:nth-child(2) { background-image: url('https://via.placeholder.com/1200x800/2ecc71/fff?text=Slide+2'); }
+.slide:nth-child(3) { background-image: url('https://via.placeholder.com/1200x800/f1c40f/fff?text=Slide+3'); }
 
 .slide.active {
     opacity: 1;
@@ -140,13 +140,26 @@ nav a:hover {
     transform: translateX(-50%) scale(1.05);
 }
 
+.products {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: none;
+}
 
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
 
 .product-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures 3-4 cards per row on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Original grid setup */
     gap: 2rem;
     padding: 2rem;
 }
@@ -157,9 +170,6 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Ensures consistent card height */
-    display: flex;
-    flex-direction: column;
 }
 
 .product img {
@@ -169,14 +179,6 @@ nav a:hover {
     transition: transform 0.3s ease;
 }
 
-.product-content {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .product:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -184,6 +186,10 @@ nav a:hover {
 
 .product:hover img {
     transform: scale(1.1);
+}
+
+.product-content {
+    padding: 1.5rem;
 }
 
 .product-content h3 {
@@ -197,7 +203,6 @@ nav a:hover {
     font-family: sans-serif;
     color: #666;
     margin-bottom: 1rem;
-    flex-grow: 1;
 }
 
 .product-price {
@@ -205,8 +210,8 @@ nav a:hover {
     font-size: 1.2rem;
     color: #800080;
     font-weight: bold;
-    margin-top: auto; /* Pushes price to the bottom */
 }
+
 .about-us {
     padding: 5rem 2rem;
     background-color: #f5f5f5;
@@ -331,37 +336,6 @@ footer {
         flex-direction: column;
         gap: 1rem;
     }
-    /* ... existing media query styles ... */
-    .about-us h2 {
-        font-size: 2rem;
-    }
-
-    .about-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .about-text, .team-section {
-        padding: 0.5rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .learn-more {
-        padding: 10px 25px;
-        font-size: 1rem;
-    }
-
-    .team-section h3 {
-        font-size: 1.5rem;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
     nav ul {
         display: none;
@@ -396,6 +370,36 @@ footer {
     }
 
     .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-text, .team-section {
+        padding: 0.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .learn-more {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    .team-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .team-grid {
         grid-template-columns: 1fr;
     }
 }
