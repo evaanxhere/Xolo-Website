@@ -85,7 +85,7 @@ nav a:hover {
 
 .slide:nth-child(1) { background-image: url('https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/d0828b00-d878-40e6-afc5-88b200006abb/AS+W+NK+24.7+DF+MR+JOGGER+SOFT.png'); }
 .slide:nth-child(2) { background-image: url('https://static.nike.com/a/images/w_1536,c_limit/b32bf6ee-d8f0-4721-9e5d-9bb6b3bbf03e/image.jpg'); }
-.slide:nth-child(3) { background-image: url('https://via.placeholder.com/1200x800/f1c40f/fff?text=Slide+3'); }
+.slide:nth-child(3) { background-image: url('https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/af8e4590-3c2b-461a-b840-02c3b9f567dd/AS+U+ISPA+ADPT+MOD+VEST.png'); }
 
 .slide.active {
     opacity: 1;
